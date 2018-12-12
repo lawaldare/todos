@@ -1,5 +1,5 @@
 function searchById(){
-    var id = document.getElementById('input').value;
+    let id = document.getElementById('input').value;
     fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
     .then(response => response.json())
     .then(json => console.log(json))
