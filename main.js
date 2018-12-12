@@ -24,4 +24,12 @@ function searchByText(){
 
 }
 
-//console.log(searchByText('dol'));
+function getGitHubRepo(user){
+    //let id = document.getElementById('input').value;
+    fetch(`https://api.github.com/${user}/repos`)
+    .then(response => response.json())
+    .then(json => console.log(json))
+}
+
+getGitHubRepo('lawaldare');
+
